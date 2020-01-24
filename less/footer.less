@@ -1,5 +1,6 @@
 // Footer Styles
-footer {
+.footer {
+  .display(show);
   color: #22283B;
   background: #f4f4f4;
   padding: 20px 0;
@@ -8,4 +9,23 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media @phone {
+    .display(none);
+
+  }
+}
+
+.mobile-foot {
+  .display(none);
+  @media @phone {
+    .display(show);
+      width: 100%;
+      color: #22283B;
+      background: #f4f4f4;
+      padding: 20px 0;
+      border: 1px double #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 }

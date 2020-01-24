@@ -1,1 +1,51 @@
 // Mixins Here
+
+.btn-mix(@col, @size, @txt) {
+    background: @col;
+    width: @size;
+    color: @txt;
+    font-size: 1.6rem;
+    @media @phone {
+        height: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    &:hover {
+        color: @col;
+        background: @txt;
+        border: 1px solid @col;
+    }
+}
+
+.hideme() {
+    @media @phone {
+        display: none;
+    }
+}
+
+.max-width() {
+    max-width: 100%;
+    width: 100%;
+}
+.max-width-mobile {
+    @media @phone {
+    max-width: 100%;
+    width: 100%;
+    }
+}
+
+.flex-col() {
+    @media @phone {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+}
+.mobile-order(@ord) {
+    @media @phone {
+    order: @ord;
+}
+}
+.display(@dis) {
+    display: @dis;
+}
